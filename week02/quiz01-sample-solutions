@@ -25,7 +25,7 @@ namespace CSC180Quiz01
 }
 
 
-5. Select all the valid C# identifiers:
+5. Select all the invalid C# identifiers and briefly explain why.
      String, my-age, 3rdNum, dynamic, __num, M&M, @void, var
 Answers:
   Invalid:
