@@ -29,7 +29,40 @@ namespace CSC180Week02
 
 
 /*
-CSC180 Week02 Programming Assignment
+2. Write a program that takes as input a four-digit number in format abcd (e.g. 1234) and performs the following actions:
+- Calculates the sum of the digits (in our example 1+2+3+4 = 10).
+- Prints on the console the number in reversed order e.g., 4321).
+- Puts the last digit in the first position (in our example 4123).
+- Exchanges the second and the third digits (in our example 1324).
+Hints: To get the individual digits of a four-digit number (num) you can use the following expressions:
+  num % 10; 
+  (num / 10) % 10; 
+  (num / 100) % 10; 
+  (num / 1000) % 10;
+*/
+
+using System;
+namespace ThinkSharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = 1234;
+            int d = num % 10;
+            int c = (num / 10) % 10;
+            int b = (num / 100) % 10;
+            int a = (num / 1000) % 10;
+            Console.WriteLine($"The sum of four digits of {num} is {d + c + b + a}");
+            Console.WriteLine($"{d}{c}{b}{a}");
+            Console.WriteLine($"{d}{a}{b}{c}");
+            Console.WriteLine($"{a}{c}{b}{d}");
+        }
+    }
+}
+
+
+/*
 #2. Declare several variables by selecting for each one of them the most appropriate of the types: 
   sbyte, byte, short, ushort, int, uint, long and ulong in order to assign them the following values: 
   52,130; -115; 4825932; 97; -10000; 20000; 224; 970,700,000; 112; -44; -1,000,000; 1990;
