@@ -72,3 +72,35 @@ rattle
 ping zoop
 boo-wa-ha-ha
 */
+
+
+
+/*
+ * CSC180 Week04 Programming Assignment
+ * Exercise 4.5. on page 44
+ * Write a method named CheckFermat to check Fermat's Last Theorem saying that 
+ * there are no integers a, b, and c such that a^n + b^n = c^n except in the case when n = 2.
+ */
+
+using System;
+namespace Fermat
+{
+    class Program
+    {
+        public static void checkFermat(int a, int b, int c, int n)
+        {
+            if (((Math.Pow(a, n) + Math.Pow(b, n)) == Math.Pow(c, n)) && (n > 2))
+            {
+                Console.WriteLine("Holy smokes, Fermat was wrong!");
+            }
+            else
+            {
+                Console.WriteLine("No, that doesn't work.");
+            }
+        }
+        public static void Main()
+        {
+            checkFermat(3, 4, 5, 3);
+        }
+    }
+}
