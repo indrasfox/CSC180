@@ -85,3 +85,85 @@ public class ProdTest // change it to a different name from Prod method
  
  
  
+/*
+ * CSC180 Week05 Programming Assignment
+ * Exercise 5.7. page 59-60
+ */
+
+using System;
+namespace CSC180Week05
+{
+    class Program
+    {
+        // first: returns the first character of the given string
+        public static char First(string s)
+        {
+            return s[0];
+        }
+        // rest: returns a new string that contains all but the
+        // first letter of the given string
+        public static string Rest(string s)
+        {
+            return s.Substring(1);
+        }
+        // length: returns the length of the given string
+        public static int Length(string s)
+        {
+            return s.Length;
+        }
+        public static void WriteString(string s)
+        {
+            for (int i = 0; i < Length(s); i++)
+            {
+                Console.WriteLine(s[i]);
+            }
+        }
+        public static void WriteBackward(string s)
+        {
+            for (int i = Length(s) - 1; i >= 0; i--)
+            {
+                Console.WriteLine(s[i]);
+            }
+        }
+        public static void WriteBackward2(string s)
+        {
+            if (Length(s) == 1)
+            {
+                Console.WriteLine(s);
+            }
+            else
+            {
+                WriteBackward2(Rest(s));
+                Console.WriteLine(First(s));
+            }
+        }
+        public static string ReverseString(string s)
+        {
+            if (Length(s) > 1)
+            {
+                return ReverseString(Rest(s)) + First(s);
+            }
+            else
+            {
+                return s;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            string str = "abcdefg";
+            Console.WriteLine($"First letter of \"{str}\": {First(str)}");
+            Console.WriteLine($"Substring of \"{str}\" except the first letter: {Rest(str)}");
+            Console.WriteLine($"Length of \"{str}\": {Length(str)}");
+            Console.WriteLine($"\nPrint the letters of \"{str}\", one on each line:");
+            WriteString(str);
+            Console.WriteLine($"\nPrint \"{str}\" backward , one on each line:");
+            WriteBackward(str);
+            Console.WriteLine($"\nPrint \"{str}\" backward , one on each line, again:");
+            WriteBackward2(str);
+            string backwards = ReverseString("Allen Downey");
+            Console.WriteLine("\nReverse of \"Allen Downey\":");
+            Console.WriteLine(backwards);
+        }
+    }
+}
