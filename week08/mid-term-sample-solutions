@@ -52,16 +52,57 @@ public class Program
     }
 }
 
+/*
+ * 3. For each of the following methods, write one sentence that describes
+ * abstractly what the method does.
+ */
+
+// Answer: computes the sum of array a's elements and returns it.
+public static int Banana(int[] a)
+{
+    int grape = 0;
+    int i = 0;
+    while (i < a.Length)
+    {
+        grape = grape + a[i];
+        i++;
+    }
+    return grape;
+}
+
+// Answer: counts the number of times that p appears in the array a
+public static int Apple(int[] a, int p)
+{
+    int i = 0;
+    int pear = 0;
+    while (i < a.Length)
+    {
+        if (a[i] == p) pear++;
+        i++;
+    }
+    return pear;
+}
+
+// Answer: return the index of the first appearance of integer p in array a, or -1 if not found
+public static int Grapefruit(int[] a, int p)
+{
+    for (int i = 0; i < a.Length; i++)
+    {
+        if (a[i] == p) return i;
+    }
+    return -1;
+}
+
 
 
 /*
-4. Extra credit: Write a program using loops to print a pattern like following.
-55555
-4444
-333
-22
-1
-*/
+ * 4. Extra credit: Write a program using loops to print a pattern like following.
+ * 55555
+ * 4444
+ * 333
+ * 22
+ * 1
+ */
 
 using System;
 public class Program
