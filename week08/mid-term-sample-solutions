@@ -1,6 +1,6 @@
 /*
  * 1. Read the following program and explain what it does. No need to explain every line of code except the for loop. 
- * Explanation:
+ * Answer:
  * The program uses a for loop to compute and print the Fibonacci sequence.
  * varibles n1, n2, n3 are used to hold three consecutive numbers.
  */
@@ -51,6 +51,8 @@ public class Program
         DoSomething("abcba");
     }
 }
+
+
 
 /*
  * 3. For each of the following methods, write one sentence that describes
