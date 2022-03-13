@@ -1,0 +1,80 @@
+/*
+ * 1. Read the following program and explain what it does. No need to explain every line of code except the for loop. 
+ * Explanation:
+ * The program uses a for loop to compute and print the Fibonacci sequence.
+ * varibles n1, n2, n3 are used to hold three consecutive numbers.
+ */
+
+using System;
+public class MyClass
+{
+    public static void Main(string[] args)
+    {
+        int n1 = 0, n2 = 1, n3, i, number;
+        Console.Write("Enter a positive integer: ");
+        number = int.Parse(Console.ReadLine());
+        Console.Write(n1 + " " + n2 + " ");
+        for (i = 2; i < number; i++)
+        {
+            n3 = n1 + n2;
+            Console.Write(n3 + " ");
+            n1 = n2;
+            n2 = n3;
+        }
+        Console.WriteLine();
+    }
+}
+
+
+
+/*
+ * 2. Describe the method DoSomething().
+ * Answer:
+ * The DoSomething method displays a string in reverse order.
+ */
+
+using System;
+public class Program
+{
+    public static void DoSomething(string str)
+    {
+        int i = str.Length - 1;
+        while (i >= 0)
+        {
+            Console.Write($"{str[i]} ");
+            i--;
+        }
+        Console.Write("\n");
+    }
+    public static void Main()
+    {
+        DoSomething("abcba");
+    }
+}
+
+
+
+/*
+4. Extra credit: Write a program using loops to print a pattern like following.
+55555
+4444
+333
+22
+1
+*/
+
+using System;
+public class Program
+{
+    public static void Main()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            for (int j = 5; j > i; j--)
+            {
+                Console.Write(5-i);
+            }
+            Console.WriteLine();
+        }
+    }
+}
